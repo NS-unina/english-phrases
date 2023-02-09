@@ -1,0 +1,57 @@
+
+    {/* <ReactiveList
+            componentId="results"
+            dataField="name"
+            size={100}
+            pagination={true}
+            react={{
+              and: ["searchbox", "sectionfilter"]
+            }}
+            style={{ textAlign: "center" }}
+            render={({ data }) => (
+              <div>
+                <table>
+                  <thead>
+                  <tr>
+                    <th>Section</th>
+                    <th>What</th>
+                    <th>Phrase</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+              {data.map((item) => (
+                
+                <tr key={item._id}>
+                  <td>{item.section}</td>
+                  <td>{item.what}</td>
+                  <td>{item.phrase}</td>
+                </tr>
+              ))}
+              </tbody>
+              </table>
+              </div>
+              // <ReactiveList.ResultCardsWrapper>
+              //   {data.map((item) => (
+              //     <h1>Ciao</h1>,
+              //     <ResultCard key={item._id}>
+              //       {/* <ResultCard.Image
+              //         style={{
+              //           backgroundSize: "cover",
+              //           backgroundImage: `url(${item.image})`
+              //         }}
+              //       /> */}
+              //       <ResultCard.Title
+              //         dangerouslySetInnerHTML={{
+              //           __html: item.section
+              //         }}
+              //       />
+              //       <ResultCard.Description>
+              //         {item.phrase}
+              //       </ResultCard.Description>
+              //     </ResultCard>
+              //   ))}
+              // </ReactiveList.ResultCardsWrapper>
+            // )}
+            // /> */}
+
+    </div>
