@@ -20,6 +20,12 @@ import {
 } from "@appbaseio/reactivesearch";
 
 
+const Styles = {
+  appStyle: {
+    margin: "20px",
+    fontFamily: 'Lato, sansSerif'
+  }
+}
 
 
 
@@ -115,20 +121,22 @@ function reactiveBase() {
 /* Phrase Section What */
 function App() {
   return (
-  <Tabs>
-  <TabList>
-    <Tab> Phrases </Tab>
-    <Tab>Citations</Tab>
-  </TabList>
+    <div style={Styles.appStyle}>
+    <Tabs>
+    <TabList>
+      <Tab> Phrases </Tab>
+      <Tab>Citations</Tab>
+    </TabList>
 
-  <TabPanel>
-    {/* {reactiveBase()} */}
-    <Json></Json>
-  </TabPanel>
-  <TabPanel>
-    <Bibtex></Bibtex>
-  </TabPanel>
-</Tabs>
+    <TabPanel>
+      {/* {reactiveBase()} */}
+      <Json></Json>
+    </TabPanel>
+    <TabPanel>
+      <Bibtex></Bibtex>
+    </TabPanel>
+  </Tabs>
+  </div>
   )
 
 }
