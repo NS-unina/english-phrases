@@ -4,6 +4,7 @@ import React from "react";
 // https://codepen.io/ghozt12/pen/LVaxLM
 import jsonPhrases from './phrases.json';
 import Fuse from "fuse.js";
+import {styles} from './Styles';
 
 const uniqueArr = (jsonPhrases) => {
     var temp = []
@@ -255,8 +256,8 @@ class Search extends React.Component {
     render() {
         console.log(this.props.searchTerm)
         return (
-            <div class="my-4">
-                <input class="w-full border-1 border-black" key={this.props.searchTerm} type="text"
+            <div style={styles.Sticky}>
+                <input  class="w-full border-1 rounded-md border-black" key={this.props.searchTerm} type="text"
                     placeholder="Start Typing"
                     value={this.props.searchTerm}
                     onChange={this.filterList} autoFocus>

@@ -6,6 +6,8 @@ import 'react-tabs/style/react-tabs.css';
 import Bibtex from './Bibtex';
 import Json from './Json';
 
+import {styles} from './Styles'
+
 
 
 import {
@@ -20,12 +22,6 @@ import {
 } from "@appbaseio/reactivesearch";
 
 
-const Styles = {
-  appStyle: {
-    margin: "20px",
-    fontFamily: 'Lato, sansSerif'
-  }
-}
 
 
 
@@ -35,6 +31,17 @@ function reactiveBase() {
     <ReactiveBase
       url={process.env.REACT_APP_ELK_URL}
       app="phrases"
+      theme = {{
+        colors: {
+          textColor: '#fff',
+          backgroundColor: '#212121',
+          primaryTextColor: '#fff',
+          primaryColor: '#2196F3',
+          titleColor: '#fff',
+          alertColor: '#d9534f',
+          borderColor: '#666',
+        }
+      }}
       // credentials="04717bb076f7:be54685e-db84-4243-975b-5b32ee241d31"
       enableAppbase={false}
 
@@ -121,7 +128,7 @@ function reactiveBase() {
 /* Phrase Section What */
 function App() {
   return (
-    <div style={Styles.appStyle}>
+    <div style={styles.AppStyle}>
     <Tabs>
     <TabList>
       <Tab> Phrases </Tab>
